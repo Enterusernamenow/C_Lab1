@@ -1,0 +1,27 @@
+#include <stdio.h>
+
+int main()
+
+{
+    int i, small, x, n;
+    printf("Enter an integer:\n");
+    scanf("%d", &n);
+    while (n < 0) {
+         printf("Enter an integer:");
+         scanf("%d", &n);
+    }
+    for (i = 0; i <= n - 1; i++) {
+        printf("Enter an integer:");
+        scanf("%d", &x);
+        if (i == 0) {
+            small = x;
+        }
+        if (x < small)  {
+            small = x;
+        }
+        
+    }
+    printf("The smallest value is %d.", small);
+}
+
+

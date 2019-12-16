@@ -1,0 +1,25 @@
+#include <stdio.h>
+
+int main()
+{
+    int m = 0;
+    while (m <= 1) {
+        printf("Enter a positive integer that is larger than one:\n");
+        scanf("%d", &m);
+    }
+    int x, y, sum;
+    for (y = 1; y <= m; y++) {
+        sum = 0;
+        for (x = 1; x <= (y - 1); x++) {
+            if (y % x == 0) {
+                sum = sum + x;
+            }
+        }
+        if (sum == y) {
+            printf("%d\n", y);
+        }
+    }
+    return 0;
+}
+
+
